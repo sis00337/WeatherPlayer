@@ -3,36 +3,47 @@ import requests
 import json
 
 
-def get_song_name() -> None:
+def SEARCH_HOW_MANY_SONGS():
+    return 5
+
+
+def dictionary_maker() -> None:
     """
-    Get the name of songs by artist's name from the Itunes API.
+    Store the information of tracks to a list of dictionaries.
 
     :return: None
     """
     artists = get_top_artists()
-    SIZE = 5
     track_info = []
     song_dict_key = ['artistName', 'tracks']
     track_dict_key = ['trackName', 'genreName', 'previewUrl']
     for artist_name in artists:
-        url = f'https://itunes.apple.com/search?term={artist_name}&entity=musicTrack&limit={SIZE}'
-        song_list = []
-        for number in range(SIZE):
-            data = requests.get(url)
-            response = data.json()
-            try:
-                track_dict_value = [response["results"][number]["trackName"],
-                                    response["results"][number]["primaryGenreName"],
-                                    response["results"][number]["previewUrl"]]
-                track_dict = dict(zip(track_dict_key, track_dict_value))
-                song_list.append(track_dict)
-            except IndexError:
-                pass
+        song_list = get_track_info(artist_name, track_dict_key)
         song_dict_value = [artist_name.title().replace('+', ' '), song_list]
         song_dict = dict(zip(song_dict_key, song_dict_value))
         track_info.append(song_dict)
 
     write_json_file(track_info)
+
+
+def get_track_info(artist_name: str, track_dict_key: list) -> list:
+    """
+    Get thr information of tracks from iTunes API.
+    """
+    url = f'https://itunes.apple.com/search?term={artist_name}&entity=musicTrack&limit={SEARCH_HOW_MANY_SONGS()}'
+    song_list = []
+    for number in range(SEARCH_HOW_MANY_SONGS()):
+        data = requests.get(url)
+        response = data.json()
+        try:
+            track_dict_value = [response["results"][number]["trackName"],
+                                response["results"][number]["primaryGenreName"],
+                                response["results"][number]["previewUrl"]]
+            track_dict = dict(zip(track_dict_key, track_dict_value))
+            song_list.append(track_dict)
+        except IndexError:
+            pass
+    return song_list
 
 
 def write_json_file(track_info: list) -> None:
@@ -47,7 +58,7 @@ def write_json_file(track_info: list) -> None:
 
 
 def main():
-    get_song_name()
+    dictionary_maker()
 
 
 if __name__ == '__main__':
