@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WeatherMusic</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+</head>
+<body>
+    <h1 class="weather"></h1>
+    <p class="musicvideo"></p>
+    <button id="btn-get-music">Get recommended music</button>
+
+{#    <div class="form-container">#}
+{#        <span class="description">Search for a lyric/word. LyriCount will show you which lyrics are used the most based#}
+{#            on Musicians.</span>#}
+{#        <form action="{{ url_for('search') }}" method="POST">#}
+{##}
+{#            {{ form.word_search.label }} {{ form.word_search }}#}
+{#            {{ form.csrf_token }}#}
+{#            {{ form.submit }}#}
+{##}
+{#        </form>#}
+{#    </div>#}
+{#    {% if form.is_submitted %}#}
+{#        <div class="image-container"><img src="{{ url_for('static', filename="plot.png") }}"/></div>#}
+{#    {% endif %}#}
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
