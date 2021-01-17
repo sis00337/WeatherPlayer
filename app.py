@@ -19,15 +19,17 @@ def search():
         query = request.form['word_search']
         weather_json = get_weather_info(query.lower())
         temp = str(weather_json['main']['temp']) + '°C'
-        cloud = weather_json['weather'][0]['main'].title()
+        icon_id = weather_json['weather'][0]['icon']
+        icon = "http://openweathermap.org/img/wn/" + icon_id + "@2x.png"
+        weather_type = weather_json['weather'][0]['main'].title()
 
         # a function that returns the appropriate song list based on weather type
         song_list = make_playlist.weather_to_song_convertor(cloud)
 
         return render_template("base.html", data=query.lower(),
                                form=form, temp=temp,
-                               city=weather_json['name'], cloud=cloud,
-                               time=time)
+                               city=weather_json['name'],
+                               time=time, icon=icon, weather_type=weather_type)
     return render_template("base.html", form=form, time=time)
 
 

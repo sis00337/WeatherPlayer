@@ -26,7 +26,16 @@
 
         </form>
     </div>
-    <button id="btn-get-music">Get recommended music</button>
+
+    {% if form.is_submitted %}
+        {% for song in playlist %}
+            <img src={{  }}>
+            <p>{{  }}</p>
+            <p>{{  }}</p>
+            <p>{{  }}</p>
+            <a href={{  }}>{{  }}</a>
+    {% endif %}
+
     
     <!--For loop goes here to display song list-->
     

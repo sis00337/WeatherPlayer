@@ -22,6 +22,7 @@ def make_playlist(genre1: str, genre2: str, genre3: str):
     return playlist
 
 
+
 def weather_to_song_convertor(weather_condition: str) -> list:
     """Return list of songs depending on weather conditions"""
 
