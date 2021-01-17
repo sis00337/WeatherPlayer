@@ -17,13 +17,10 @@ def search():
         query = request.form['word_search']
         weather_json = get_weather_info(query.lower())
         temp = str(weather_json['main']['temp']) + '°C'
-        icon_value = weather_json['weather'][0]['icon']
-        weather_image = "http://openweathermap.org/img/wn/" + icon_value + "@2x.png"
         return render_template("base.html", data=query.lower(),
                                form=form, temp=temp,
                                city=weather_json['name'], cloud=weather_json['weather'][0]['description'].title(),
-                               time=time, icon=weather_image)
-
+                               time=time)
     return render_template("base.html", form=form, time=time)
 
 
