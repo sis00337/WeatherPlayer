@@ -29,6 +29,8 @@
 
 
     {% if form.is_submitted %}
+
+        <p id="recommendation-intro">Based on the weather conditions, we thought you might like these songs.</p>
         <div id="playList">
             {% for song in songs %}
                 <img src={{ song["thumbnail"] }}>
