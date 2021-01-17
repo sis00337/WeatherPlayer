@@ -1,7 +1,7 @@
 import json
 
 
-def make_playlist(genre1: str, genre2: str, genre3: str):
+def make_playlist(genre1, genre2, genre3):
     """
 
     :param: string or 0
@@ -21,7 +21,6 @@ def make_playlist(genre1: str, genre2: str, genre3: str):
                                      "thumbnail": song["thumbnail"]}
                         playlist.append(song_data)
     return playlist
-
 
 
 def weather_to_song_convertor(weather_condition: str) -> list:
