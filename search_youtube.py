@@ -35,7 +35,7 @@ def main():
     response = request.execute()
 
     search_results = response["items"]
-    first_result = search_results[1]
+    first_result = search_results[0]
     id_info = first_result["id"]
     video_id = id_info["videoId"]
     print(f"https://www.youtube.com/embed/" + video_id)
