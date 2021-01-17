@@ -35,6 +35,7 @@ def main():
     )
     response = request.execute()
 
+    print(response)
     search_results = response["items"]
     first_result = search_results[0]
     id_info = first_result["id"]

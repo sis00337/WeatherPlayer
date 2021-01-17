@@ -15,7 +15,7 @@
     {% endif %}
 
     <p class="musicvideo"></p>
-    <p id="recommendation-intro">Based on the weather conditions, we thought you might like these music.</p>
+    <p id="recommendation-intro">Based on the weather conditions, we thought you might like these songs.</p>
     <div class="form-container">
         <form action="{{ url_for('search') }}" method="POST">
 
@@ -27,5 +27,6 @@
     </div>
     <button id="btn-get-music">Get recommended music</button>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
+
 </body>
 </html>
