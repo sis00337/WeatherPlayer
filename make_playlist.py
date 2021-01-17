@@ -16,7 +16,7 @@ def make_playlist(genre1: str, genre2: str, genre3: str):
             for song in tracks:
                 for genre in genres:
                     if song["genreName"] == genre:
-                        song_data = {"trackName": artist["trackName"], "artistName": artist["artistName"],
+                        song_data = {"trackName": song["trackName"], "artistName": artist["artistName"],
                                      "trackViewUrl": song["trackViewUrl"], "previewUrl": song["previewUrl"],
                                      "thumbnail": song["thumbnail"]}
                         playlist.append(song_data)
