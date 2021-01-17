@@ -19,7 +19,7 @@ def search():
         temp = str(weather_json['main']['temp']) + '°C'
         return render_template("base.html", data=query.lower(),
                                form=form, temp=temp,
-                               city=weather_json['name'], cloud=weather_json['weather'][0]['description'].title(),
+                               city=weather_json['name'], cloud=weather_json['weather'][0]['main'].title(),
                                time=time)
     return render_template("base.html", form=form, time=time)
 
