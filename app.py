@@ -24,12 +24,13 @@ def search():
         weather_type = weather_json['weather'][0]['main'].title()
 
         # a function that returns the appropriate song list based on weather type
-        song_list = make_playlist.weather_to_song_convertor(cloud)
+        song_list = make_playlist.weather_to_song_convertor(weather_type)
 
         return render_template("base.html", data=query.lower(),
                                form=form, temp=temp,
                                city=weather_json['name'],
-                               time=time, icon=icon, weather_type=weather_type)
+                               time=time, icon=icon, weather_type=weather_type,
+                               songs=song_list)
     return render_template("base.html", form=form, time=time)
 
 

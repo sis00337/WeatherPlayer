@@ -12,12 +12,13 @@ def make_playlist(genre1: str, genre2: str, genre3: str):
         playlist = []
         genres = [genre1, genre2, genre3]
         for artist in data:
-            track = artist["tracks"]
-            for song in track:
+            tracks = artist["tracks"]
+            for song in tracks:
                 for genre in genres:
                     if song["genreName"] == genre:
-                        song_data = {"artistName": artist["artistName"], "trackViewUrl": song["trackViewUrl"],
-                                     "previewUrl": song["previewUrl"], "thumbnail": song["thumbnail"]}
+                        song_data = {"trackName": artist["trackName"], "artistName": artist["artistName"],
+                                     "trackViewUrl": song["trackViewUrl"], "previewUrl": song["previewUrl"],
+                                     "thumbnail": song["thumbnail"]}
                         playlist.append(song_data)
     return playlist
 
