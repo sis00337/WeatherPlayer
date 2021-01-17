@@ -28,13 +28,15 @@
     </div>
 
     {% if form.is_submitted %}
-        {% for song in songs %}
-            <div>
-            <img src={{ song["thumbnail"] }}>
-            <p>{{ song["artistName"] }}</p>
-            <a href={{ song["trackViewUrl"] }}>{{ song["trackName"] }}</a>
-            </div>
-        {% endfor %}
+        <div id="playList">
+            {% for song in songs %}
+                <div>
+                <img src={{ song["thumbnail"] }}>
+                <p>{{ song["artistName"] }}</p>
+                <a href={{ song["trackViewUrl"] }}>{{ song["trackName"] }}</a>
+                </div>
+            {% endfor %}
+        </div>
     {% endif %}
     
     <script src="{{ url_for('static', filename='script.js') }}"></script>
