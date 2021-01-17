@@ -143,3 +143,13 @@ label{
     justify-content: center;
     align-items: center;
 }
+
+#playList{
+    height: 500px;
+    width: 500px;
+    overflow: auto;
+}
+
+#playList div{
+    border: 2px solid black;
+}
