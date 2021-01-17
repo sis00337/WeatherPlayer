@@ -2,7 +2,7 @@
 
 body{
     /*background: linear-gradient(#141e30, #243b55);*/
-    background: #10665C;
+    background: #172B41;
     height: 1000px;
     font-family: 'Open Sans', sans-serif;
     display: flex;
@@ -151,30 +151,28 @@ label{
     overflow: auto;
 }
 
-#playList div{
-    border: 2px solid black;
-    width: 99%;
-    margin: 0 auto;
-    height: 150px;
+#playList img{
+    float: left;
+    margin-right: 50px;
 }
 
-#playList img {
-    margin: 10px;
+#songInfo{
     float: left;
 }
 
-#playList p {
-    font-size: 32px;
-    margin-top: 20px;
-    margin-bottom: 10px;
+#playList p{
+    color: #ec681f;
 }
 
-#playList a {
-    font-size: 20px;
-    color: whitesmoke;
-    text-decoration: none;
+#playList a{
+    color: white;
 }
 
-#playList a:hover {
-    color: coral;
+.cf::after {
+    content: "";
+    display: block;
+    clear: both;
+    width: 99%;
+    margin: 0 auto;
+    height: 150px;
 }
