@@ -2,6 +2,8 @@ from flask import Flask, render_template, request
 from get_time_data import get_time
 from form import WordSearchForm
 from weather_geolocation import get_weather_info
+import make_playlist
+
 
 app = Flask(__name__)
 
@@ -17,9 +19,14 @@ def search():
         query = request.form['word_search']
         weather_json = get_weather_info(query.lower())
         temp = str(weather_json['main']['temp']) + '°C'
+        cloud = weather_json['weather'][0]['main'].title()
+
+        # a function that returns the appropriate song list based on weather type
+        song_list = make_playlist.weather_to_song_convertor(cloud)
+
         return render_template("base.html", data=query.lower(),
                                form=form, temp=temp,
-                               city=weather_json['name'], cloud=weather_json['weather'][0]['main'].title(),
+                               city=weather_json['name'], cloud=cloud,
                                time=time)
     return render_template("base.html", form=form, time=time)
 
