@@ -25,16 +25,15 @@
         </form>
     </div>
 
-    {% if form.is_submitted %}
+    <p id="recommendation-intro">Based on the weather conditions, we thought you might like these songs.</p>
 
-        <p id="recommendation-intro">Based on the weather conditions, we thought you might like these songs.</p>
+
+    {% if form.is_submitted %}
         <div id="playList">
             {% for song in songs %}
-                <div class="cf">
-                    <img src={{ song["thumbnail"] }}>
-                    <p>{{ song["artistName"] }}</p>
-                    <a href={{ song["trackViewUrl"] }}>{{ song["trackName"] }}</a>
-                </div>
+                <img src={{ song["thumbnail"] }}>
+                <p>{{ song["artistName"] }}</p>
+                <a href={{ song["trackViewUrl"] }}>{{ song["trackName"] }}</a>
             {% endfor %}
         </div>
     {% endif %}

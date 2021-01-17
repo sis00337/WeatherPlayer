@@ -125,24 +125,8 @@ label{
     height: 15%;
     background-color: #172B41;
     border-radius: 10px;
-    /*box-shadow: 0 0 0 transparent, 0 0 5px #25334d,*/
-    /*0 0 5px #080c13, 0 0 5px #070c15, 0 0 10px #2b3f62,*/
-    /*0 0 30px #27354e, 0 0 100px #455c85, 0 0 100px #2d4166;*/
     margin-bottom: 5vh;
 
-}
-
-.image-container{
-  background-color: #172B41;
-    border-radius: 10px;
-    box-shadow: 0 0 0 transparent, 0 0 5px #25334d,
-    0 0 5px #080c13, 0 0 5px #070c15, 0 0 10px #2b3f62,
-    0 0 30px #27354e, 0 0 100px #455c85, 0 0 100px #2d4166;
-    width: 50%;
-    height: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 #playList{
@@ -151,28 +135,27 @@ label{
     overflow: auto;
 }
 
-#playList img{
-    float: left;
-    margin-right: 50px;
+#playList div {
+    width: 80%;
+    margin: 0 auto;
+    border-bottom: 1px solid whitesmoke;
+    height: 115px;
 }
 
-#songInfo{
+#playList img{
     float: left;
+    margin-right: 10px;
 }
 
 #playList p{
+    font-size: 26px;
+    margin-top: 20px;
+    margin-bottom: 10px;
     color: #ec681f;
 }
 
 #playList a{
+    font-size: 20px;
     color: white;
-}
-
-.cf::after {
-    content: "";
-    display: block;
-    clear: both;
-    width: 99%;
-    margin: 0 auto;
-    height: 150px;
+    text-decoration: none;
 }
