@@ -8,9 +8,12 @@
 <body>
 
     <p>{{time}}</p>
+    {% if form.is_submitted %}
+        <p class="weather">{{ temp }}</p>
+        <p class="weather">{{ city }}</p>
+        <p class="weather">{{ cloud }}</p>
+    {% endif %}
 
-    <p class="weather">{{ temp }} {{ city }} {{ cloud }}</p>
-    <p class="city_temperature"></p>
     <p class="musicvideo"></p>
     <p id="recommendation-intro">Based on the weather conditions, we thought you might like these music.</p>
     <div class="form-container">

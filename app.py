@@ -16,9 +16,10 @@ def search():
     if form.validate_on_submit() and request.form['word_search'].strip():
         query = request.form['word_search']
         weather_json = get_weather_info(query.lower())
+        temp = str(weather_json['main']['temp']) + '°C'
         return render_template("base.html", data=query.lower(),
-                               form=form, temp=weather_json['main']['temp'],
-                               city=weather_json['name'], cloud=[weather_json['weather'][0]['description'].title()],
+                               form=form, temp=temp,
+                               city=weather_json['name'], cloud=weather_json['weather'][0]['description'].title(),
                                time=time)
     return render_template("base.html", form=form, time=time)
 

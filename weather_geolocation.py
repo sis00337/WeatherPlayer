@@ -72,7 +72,6 @@ def get_city_name(json_data):
 
 
 def sunny_or_cloudy(json_data):
-    print(json_data)
     return json_data['weather'][0]['description']
 
 
