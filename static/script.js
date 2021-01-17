@@ -1,4 +1,5 @@
 let weather = document.querySelector(".weather");
+let city_temperature = document.querySelector(".city_temperature");
 
 const API_KEY = `fb948a68fea5555ccf35cc9260208dd9`;
 
@@ -11,7 +12,8 @@ function getWeather(lat, lon){
         let temperature = json['main']['temp'];
         let cityName = json['name'];
         let sunny_or_cloudy = json['weather'][0]['main'];
-        weather.textContent = `${temperature}C @ ${cityName} ${sunny_or_cloudy}`;
+        weather.textContent = `It is currently ${temperature}°C @ in ${cityName}.`
+        city_temperature.textContent = `Your current weather is ${sunny_or_cloudy}.`
     })
 }
 

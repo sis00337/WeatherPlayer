@@ -13,9 +13,9 @@ def get_time():
 
     if current_hour in range(1, 13):
         return "Good morning"
-    elif current_hour in range(12, 19):
+    elif current_hour in range(12, 18):
         return "Good afternoon"
-    elif current_hour in range(18, 25):
+    elif current_hour in range(17, 25):
         return "Good evening"
     else:
         return "Hello"
