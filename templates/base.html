@@ -31,9 +31,11 @@
     {% if form.is_submitted %}
         <div id="playList">
             {% for song in songs %}
+            <div>
                 <img src={{ song["thumbnail"] }}>
                 <p>{{ song["artistName"] }}</p>
                 <a href={{ song["trackViewUrl"] }}>{{ song["trackName"] }}</a>
+            </div>
             {% endfor %}
         </div>
     {% endif %}

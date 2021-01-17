@@ -135,6 +135,10 @@ label{
     overflow: auto;
 }
 
+#playList::-webkit-scrollbar-thumb {
+    background-color: #ec681f;
+}
+
 #playList div {
     width: 80%;
     margin: 0 auto;
