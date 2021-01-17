@@ -11,14 +11,6 @@ def search():
     return render_template("base.html", time=time)
 
 
-@app.route("/", methods=["GET"])
-def get_data_from_js():
-    if request.method == 'GET':
-        js_variable = request.form
-        print(js_variable)
-        return js_variable
-
-
 @app.after_request
 def add_header(response):
     # response.cache_control.no_store = True
