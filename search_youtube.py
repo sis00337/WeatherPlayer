@@ -24,13 +24,18 @@ def main():
 
     request = youtube.search().list(
         part="snippet",
-        maxResults=25,
-        q="AAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        maxResults=2,
+        q="Taylor Swift Blank Space",
         type="video"
     )
     response = request.execute()
 
-    print(response)
+    search_results = response["items"]
+    first_result = search_results[1]
+    id_info = first_result["id"]
+    video_id = id_info["videoId"]
+    print(f"https://www.youtube.com/watch?v=" + video_id)
+
 
 if __name__ == "__main__":
     main()
