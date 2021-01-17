@@ -2,7 +2,7 @@ import requests
 import json
 
 
-def geolocation_api_call():
+def geolocation_api_call(city: str):
     """The API url format is https://geocode.search.hereapi.com/v1/geocode?apikey=YOUR_API_KEY&q=ADDRESS_TO_SEARCH
 
     :postcondition: Submit GET request to API url and process the response into usable JSON data
@@ -12,8 +12,10 @@ def geolocation_api_call():
     # Assemble API call components
     api_key = "apikey=" + "qyMNiLbm-lx7gegxL4ixX_w5kYqAQJTO1BhgbmDOtt4"
 
-    # REPLACE WITH USER INPUT FROM HTML
-    search_address = "&q=" + "5+Rue+Daunou%2C+75000+Paris%2C+France"
+    # SAMPLE FULL ADDRESS FORMAT
+    # search_address = "&q=" + "5+Rue+Daunou%2C+75000+Paris%2C+France"
+
+    search_address = "&q=" + city
     print(f'Sample search param: {search_address}')
     base_url = "https://geocode.search.hereapi.com/v1/geocode?"
 
@@ -70,7 +72,7 @@ def sunny_or_cloudy(json_data):
 
 def main():
     """Test that the functions are working properly"""
-    json_geolocation = geolocation_api_call()
+    json_geolocation = geolocation_api_call("Paris")
 
     lat_long = get_coordinates(json_geolocation)
     latitude = lat_long['lat']
