@@ -17,6 +17,3 @@ def make_playlist(genre1: str, genre2: str, genre3: str):
                         song_data["thumbnail"] = song["thumbnail"]
                         playlist.append(song_data)
     return playlist
-
-
-print(make_playlist("Pop", "0", "0"))
