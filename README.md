@@ -4,16 +4,39 @@
 
 
 ## Inspiration
-AAA
+We thought it would be cool to have music that fit the
+environment, as if living in a movie.
+
 ## What it does
-BBB
+WeatherPlayer lets the user input a city and
+returns a list of recommended songs based on
+the weather in the city. Users enter the city
+they are in to get music suggestions that may
+fit the mood of the weather.
+ 
 ## How we built it
-CCC
+We used Python with Flask to handle the backend features 
+and Pycharm as are IDE. 
+
 ## Challenges we ran into
-DDD
+As this is our first Hackathon for most of us, many
+seemingly trivial matters became challenges. Our biggest
+challenges involved finding the appropriate API's and 
+understanding the structure of an app that uses Flask.
+ 
 ## Accomplishments that we're proud of
-EEE
+We made something that works in short time on our own
+with minimal guidance. 
+
 ## What we learned
-FFF
+We learned to use Flask (and some Jinja templating),
+pulling data from API's, and how to work with 
+effectively with team members using github. 
+
 ## What's next for WeatherPlayer
-GGG
+Currently, we are using a fixed library of songs. 
+The next step will be to integrate a music API, such as 
+Spotify or Youtube, so that music suggestions get updated
+as new music appears. Also, song suggestions can be 
+more customized to more specific weather conditions.
+Finally, we'll want to successfully host the app.
