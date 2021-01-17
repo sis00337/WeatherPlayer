@@ -15,8 +15,6 @@
         <img src={{ icon }}>
     {% endif %}
 
-    <p class="musicvideo"></p>
-    <p id="recommendation-intro">Based on the weather conditions, we thought you might like these songs.</p>
     <div class="form-container">
         <form action="{{ url_for('search') }}" method="POST">
 
@@ -28,6 +26,8 @@
     </div>
 
     {% if form.is_submitted %}
+
+        <p id="recommendation-intro">Based on the weather conditions, we thought you might like these songs.</p>
         <div id="playList">
             {% for song in songs %}
                 <div class="cf">
