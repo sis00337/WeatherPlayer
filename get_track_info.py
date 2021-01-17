@@ -16,7 +16,7 @@ def dictionary_maker() -> None:
     artists = get_top_artists()
     track_info = []
     song_dict_key = ['artistName', 'tracks']
-    track_dict_key = ['trackName', 'genreName', 'previewUrl']
+    track_dict_key = ['trackName', 'genreName', 'previewUrl', 'thumbnail']
     for artist_name in artists:
         song_list = get_track_info(artist_name, track_dict_key)
         song_dict_value = [artist_name.title().replace('+', ' '), song_list]
@@ -38,7 +38,8 @@ def get_track_info(artist_name: str, track_dict_key: list) -> list:
         try:
             track_dict_value = [response["results"][number]["trackName"],
                                 response["results"][number]["primaryGenreName"],
-                                response["results"][number]["previewUrl"]]
+                                response["results"][number]["previewUrl"],
+                                response["results"][number]["artworkUrl100"]]
             track_dict = dict(zip(track_dict_key, track_dict_value))
             song_list.append(track_dict)
         except IndexError:

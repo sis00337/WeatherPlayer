@@ -11,9 +11,6 @@ function getWeather(lat, lon){
         let temperature = json['main']['temp'];
         let cityName = json['name'];
         let sunny_or_cloudy = json['weather'][0]['main'];
-        console.log(temperature)
-        console.log(cityName)
-        console.log(sunny_or_cloudy)
         weather.textContent = `${temperature}C @ ${cityName} ${sunny_or_cloudy}`;
     })
 }
@@ -25,7 +22,7 @@ function geoError(){
 function geoSucces(position){
     let latitude = position.coords.latitude;
     let longitude = position.coords.longitude;
-    getWeather(latitude, longitude)
+    getWeather(latitude, longitude);
 }
 
 function askLocation(){
