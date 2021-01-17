@@ -2,7 +2,20 @@ import requests
 import json
 
 
+<<<<<<< HEAD:weather and geolocation.py
 def geolocation_api_call(city: str):
+=======
+def get_weather_info(search_keyword):
+    json_obj = geolocation_api_call(search_keyword)
+    location_dict = get_coordinates(json_obj)
+    latitude = location_dict['lat']
+    longitude = location_dict['lng']
+    weather_json = weather_api_call(latitude, longitude)
+    return weather_json
+
+
+def geolocation_api_call(search_keyword):
+>>>>>>> 136a7c6... Search function included:weather_geolocation.py
     """The API url format is https://geocode.search.hereapi.com/v1/geocode?apikey=YOUR_API_KEY&q=ADDRESS_TO_SEARCH
 
     :postcondition: Submit GET request to API url and process the response into usable JSON data
@@ -12,11 +25,16 @@ def geolocation_api_call(city: str):
     # Assemble API call components
     api_key = "apikey=" + "qyMNiLbm-lx7gegxL4ixX_w5kYqAQJTO1BhgbmDOtt4"
 
+<<<<<<< HEAD:weather and geolocation.py
     # SAMPLE FULL ADDRESS FORMAT
     # search_address = "&q=" + "5+Rue+Daunou%2C+75000+Paris%2C+France"
 
     search_address = "&q=" + city
     print(f'Sample search param: {search_address}')
+=======
+    # REPLACE WITH USER INPUT FROM HTML
+    search_address = f"&q={search_keyword}"
+>>>>>>> 136a7c6... Search function included:weather_geolocation.py
     base_url = "https://geocode.search.hereapi.com/v1/geocode?"
 
     # Send GET request, load response into JSON format
@@ -72,7 +90,11 @@ def sunny_or_cloudy(json_data):
 
 def main():
     """Test that the functions are working properly"""
+<<<<<<< HEAD:weather and geolocation.py
     json_geolocation = geolocation_api_call("Paris")
+=======
+    json_geolocation = geolocation_api_call('vancouver')
+>>>>>>> 136a7c6... Search function included:weather_geolocation.py
 
     lat_long = get_coordinates(json_geolocation)
     latitude = lat_long['lat']

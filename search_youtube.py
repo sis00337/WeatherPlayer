@@ -10,6 +10,7 @@ artist_name = "Taylor Swift"
 track_name = "Blank Space"
 search_query = artist_name + track_name
 
+
 def main():
     # Disable OAuthlib's HTTPS verification when running locally.
     # *DO NOT* leave this option enabled in production.
@@ -38,7 +39,7 @@ def main():
     first_result = search_results[0]
     id_info = first_result["id"]
     video_id = id_info["videoId"]
-    print(f"https://www.youtube.com/embed/" + video_id)
+    print(f"https://www.youtube.com/watch?v=" + video_id)
 
 
 if __name__ == "__main__":

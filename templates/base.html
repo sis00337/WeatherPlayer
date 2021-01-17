@@ -9,10 +9,19 @@
 
     <p>{{time}}</p>
 
-    <p class="weather"></p>
+    <p class="weather">{{ temp }}&deg;C {{ city }} {{ weather }}</p>
     <p class="city_temperature"></p>
     <p class="musicvideo"></p>
     <p id="recommendation-intro">Based on the weather conditions, we thought you might like these music.</p>
+    <div class="form-container">
+        <form action="{{ url_for('search') }}" method="POST">
+
+            {{ form.word_search.label }} {{ form.word_search }}
+            {{ form.csrf_token }}
+            {{ form.submit }}
+
+        </form>
+    </div>
     <button id="btn-get-music">Get recommended music</button>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>

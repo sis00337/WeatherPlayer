@@ -1,14 +1,26 @@
 from flask import Flask, render_template, request
 from get_time_data import get_time
+from form import WordSearchForm
+from weather_geolocation import get_weather_info
 
 app = Flask(__name__)
+
+app.config['SECRET_KEY'] = 'kjhsdfkgjh345toisufg980sd7g2l34khasd987asdfk'
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 
 @app.route("/", methods=["GET", "POST"])
 def search():
-
+    form = WordSearchForm()
     time = get_time()
-    return render_template("base.html", time=time)
+    if form.validate_on_submit() and request.form['word_search'].strip():
+        query = request.form['word_search']
+        weather_json = get_weather_info(query.lower())
+        return render_template("base.html", data=query.lower(),
+                               form=form, temp=weather_json['main']['temp'],
+                               city=weather_json['name'], weather=weather_json['weather'][0]['main'],
+                               time=time)
+    return render_template("base.html", form=form, time=time)
 
 
 @app.after_request
