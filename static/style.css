@@ -44,102 +44,102 @@ body{
 }
 
 
-/*label{*/
-/*    font-size: 1.5rem;*/
-/*    margin-right: 2rem;*/
-/*    color: white;*/
-/*    margin-bottom: 0px;*/
+label{
+    font-size: 1.5rem;
+    margin-right: 2rem;
+    color: white;
+    margin-bottom: 0px;
 
-/*}*/
+}
 
-/*.description{*/
-/*    color: white;*/
-/*    font-size: 1rem;*/
-/*    letter-spacing: 1px;*/
-/*    margin-bottom: 2.3vh;*/
-/*}*/
+.description{
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin-bottom: 2.3vh;
+}
 
-/*#word_search{*/
-/*    height: 1.5rem;*/
-/*    width: 19vw;*/
-/*    size: 40px;*/
-/*    border-radius: 30px;*/
-/*    border: transparent;*/
-/*    text-align: center;*/
+#word_search{
+    height: 1.5rem;
+    width: 19vw;
+    size: 40px;
+    border-radius: 30px;
+    border: transparent;
+    text-align: center;
 
-/*}*/
+}
 
-/*#word_search:focus{*/
-/*    outline:none;*/
+#word_search:focus{
+    outline:none;
 
-/*}*/
+}
 
-/*#submit{*/
-/*    font-family: 'Open Sans', sans-serif;*/
-/*    height: 2rem;*/
-/*    width: 7rem;*/
-/*    margin-left: 30px;*/
-/*    border:  0;*/
-/*    background-color: transparent;*/
-/*    opacity: 0;*/
-/*    transition: all 1.5s ease-in-out;*/
-/*    color: transparent;*/
-/*    animation: blink 2s infinite ease-in-out;*/
+#submit{
+    font-family: 'Open Sans', sans-serif;
+    height: 2rem;
+    width: 7rem;
+    margin-left: 30px;
+    border:  0;
+    background-color: transparent;
+    opacity: 0;
+    transition: all 1.5s ease-in-out;
+    color: transparent;
+    animation: blink 2s infinite ease-in-out;
 
-/*}*/
+}
 
-/*@keyframes blink {*/
-/*    1% {*/
-/*        opacity: 0;*/
-/*        color: transparent;*/
-/*        outline: solid 0 transparent;*/
-/*    }*/
+@keyframes blink {
+    1% {
+        opacity: 0;
+        color: transparent;
+        outline: solid 0 transparent;
+    }
 
 
-/*    50% {*/
-/*        opacity: 1;*/
-/*        outline: solid 1px white;*/
-/*    }*/
+    50% {
+        opacity: 1;
+        outline: solid 1px white;
+    }
 
-/*    100% {*/
-/*        opacity: 0;*/
-/*        color: white;*/
-/*        outline:solid 0 transparent;*/
-/*    }*/
-/*}*/
+    100% {
+        opacity: 0;
+        color: white;
+        outline:solid 0 transparent;
+    }
+}
 
-/*#submit:hover{*/
-/*    border: solid white 1px;*/
-/*    opacity: 100%;*/
-/*    color: white;*/
+#submit:hover{
+    border: solid white 1px;
+    opacity: 100%;
+    color: white;
 
-/*}*/
+}
 
-/*.form-container{*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    flex-direction: column;*/
-/*    align-items: center;*/
-/*    width: 90%;*/
-/*    height: 15%;*/
-/*    background-color: #172B41;*/
-/*    border-radius: 10px;*/
-/*    !*box-shadow: 0 0 0 transparent, 0 0 5px #25334d,*!*/
-/*    !*0 0 5px #080c13, 0 0 5px #070c15, 0 0 10px #2b3f62,*!*/
-/*    !*0 0 30px #27354e, 0 0 100px #455c85, 0 0 100px #2d4166;*!*/
-/*    margin-bottom: 5vh;*/
+.form-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    height: 15%;
+    background-color: #172B41;
+    border-radius: 10px;
+    /*box-shadow: 0 0 0 transparent, 0 0 5px #25334d,*/
+    /*0 0 5px #080c13, 0 0 5px #070c15, 0 0 10px #2b3f62,*/
+    /*0 0 30px #27354e, 0 0 100px #455c85, 0 0 100px #2d4166;*/
+    margin-bottom: 5vh;
 
-/*}*/
+}
 
-/*.image-container{*/
-/*  background-color: #172B41;*/
-/*    border-radius: 10px;*/
-/*    box-shadow: 0 0 0 transparent, 0 0 5px #25334d,*/
-/*    0 0 5px #080c13, 0 0 5px #070c15, 0 0 10px #2b3f62,*/
-/*    0 0 30px #27354e, 0 0 100px #455c85, 0 0 100px #2d4166;*/
-/*    width: 50%;*/
-/*    height: 60%;*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*}*/
+.image-container{
+  background-color: #172B41;
+    border-radius: 10px;
+    box-shadow: 0 0 0 transparent, 0 0 5px #25334d,
+    0 0 5px #080c13, 0 0 5px #070c15, 0 0 10px #2b3f62,
+    0 0 30px #27354e, 0 0 100px #455c85, 0 0 100px #2d4166;
+    width: 50%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
