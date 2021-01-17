@@ -8,6 +8,6 @@ class WordSearchForm(FlaskForm):
     """Create the form."""
 
     word_search = StringField('Search', validators=[InputRequired()],
-                              render_kw={"placeholder": "Please enter City Name"})
+                              render_kw={"placeholder": "Please Enter City Name"})
     submit = SubmitField('Generate Playlist!')
 
