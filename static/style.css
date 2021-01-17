@@ -133,8 +133,6 @@ label{
     height: 500px;
     width: 500px;
     overflow: auto;
-    scrollbar-base-color: #274464;
-    scrollbar-color: #ec681f;
 }
 
 #playList div {
