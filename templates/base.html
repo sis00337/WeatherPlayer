@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <title>WeatherMusic</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+{#    <link rel="stylesheet" href="./static/style.css"/>#}
 </head>
 <body>
 
-    <p>{{time}}</p>
+    <p id="greeting">{{time}}</p>
     <h1 class="weather"></h1>
     <p class="musicvideo"></p>
     <button id="btn-get-music">Get recommended music</button>
