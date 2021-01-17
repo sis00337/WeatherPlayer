@@ -12,8 +12,9 @@ body{
 }
 
 #greeting {
-    color: #00096B;
-    font-size: 3.5rem;
+    color: whitesmoke;
+    font-size: 2.5rem;
+    font-weight: bold;
 }
 
 .weather {
@@ -152,4 +153,28 @@ label{
 
 #playList div{
     border: 2px solid black;
+    width: 99%;
+    margin: 0 auto;
+    height: 150px;
+}
+
+#playList img {
+    margin: 10px;
+    float: left;
+}
+
+#playList p {
+    font-size: 32px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#playList a {
+    font-size: 20px;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+#playList a:hover {
+    color: coral;
 }
